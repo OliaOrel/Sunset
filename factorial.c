@@ -1,5 +1,3 @@
-// large numbers
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -39,9 +37,7 @@ char * factorial(int n) {
 
     for (int i = 0; i < resSize; i++) {
       resStr[i] = res[resSize - 1 - i] + '0';
-      // printf("%c", resStr[i]);
     }
-    // sprintf(resStr1, "%s", resStr);
     for (int i = 0; i < strlen(resStr); i++) {
       resStr1[strlen(resStr1)] = resStr[i];
     }
@@ -56,36 +52,3 @@ int main()
 // } else {printf("%s\n", "Лох");}
 return 0;
 }
-
-
-/*
-small numbers
-
-#include <stdio.h>
-#include <stdlib.h>
-
-long long factorial(int n) {
-  if (n == 0) {
-    return 1;
-  }
-  else {
-    return n * factorial(n - 1);
-  }
-}
-
-char *str ;
-char *greatFactorial (int n) {
-  if (n < 0) {
-    return "";
-  } else {
-    str = (char*) malloc(sizeof(factorial(n))*sizeof(char));
-    sprintf(str, "%llu", factorial(n));
-    return str;
-  }
-}
-
-int main() {
-  printf("%s\n", greatFactorial(15));
-  return 0;
-}
-*/
